@@ -6,7 +6,7 @@ import {data, prizeMoney} from "./data";
 import Timer from "./components/Timer";
 import Start from "./components/Start";
 import * as _ from 'lodash';
-
+const exportedData = _.shuffle(data)
 function App() {
     const [name, setName] = useState(null);
     const [questionNumber, setQuestionNumber] = useState(1);
@@ -47,7 +47,7 @@ function App() {
                                     </div>
                                     <div style={{height: "50%"}}>
                                         <Quiz
-                                            data={data}
+                                            data={exportedData}
                                             questionNumber={questionNumber}
                                             setQuestionNumber={setQuestionNumber}
                                             setTimeOut={setTimeOut}
